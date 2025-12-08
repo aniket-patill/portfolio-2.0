@@ -1,7 +1,6 @@
 import React from "react";
 import { socialMedia } from "@/data";
 import { Github, Linkedin, Mail } from "lucide-react";
-import Silk from "./Silk";
 
 // Helper to get icon by name
 const getIcon = (iconName: string) => {

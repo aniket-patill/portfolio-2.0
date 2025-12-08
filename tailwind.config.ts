@@ -42,10 +42,16 @@ const config: Config = {
         cursive: ["Brush Script MT", "cursive"], // Keep existing
       },
       animation: {
+        scroll: "scroll 30s linear infinite",
         shimmer: "shimmer 2s linear infinite",
         spotlight: "spotlight 2s ease .75s 1 forwards",
       },
       keyframes: {
+        scroll: {
+          to: {
+            transform: "translate(calc(-50% - 0.5rem))",
+          },
+        },
         shimmer: {
           from: {
             backgroundPosition: "0 0",

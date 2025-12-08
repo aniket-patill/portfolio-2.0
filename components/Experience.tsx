@@ -1,5 +1,6 @@
 import { workExperience } from "@/data";
 import React from "react";
+import Image from "next/image";
 
 const Experience = () => {
   return (
@@ -20,10 +21,11 @@ const Experience = () => {
 
                     <div className="flex-shrink-0 relative">
                         <div className="w-24 h-24 md:w-32 md:h-32 bg-gray-50 rounded-2xl md:rounded-3xl flex items-center justify-center border border-gray-100 p-4 shadow-sm group-hover:scale-105 transition-transform duration-300">
-                          <img 
+                          <Image 
                               src={card.thumbnail} 
                               alt={card.title} 
-                              className="w-full h-full object-contain"
+                              fill
+                              className="object-contain p-2"
                           />
                         </div>
                     </div>

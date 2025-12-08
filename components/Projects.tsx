@@ -1,5 +1,5 @@
 import { projects } from "@/data";
-import React from "react";
+import Image from "next/image";
 import { ArrowUpRight, Atom, Wind, FileCode, AppWindow, Cpu, Code } from "lucide-react";
 
 const getIcon = (name: string) => {
@@ -24,10 +24,18 @@ const Projects = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {projects.map(({ id, title, des, img, iconLists, link }) => (
-            <div key={id} className="group relative flex flex-col gap-4">
+            <div key={id} className="group relative flex flex-col gap-4 hover:-translate-y-2 transition-transform duration-300">
               {/* Image Container */}
-              <div className="w-full h-64 bg-gray-100 rounded-3xl overflow-hidden border border-gray-200 group-hover:shadow-2xl transition-all duration-500 relative">
-                 <img src={img} alt={title} className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />
+              <div className="w-full h-64 bg-gray-100 rounded-3xl overflow-hidden border border-gray-200 group-hover:shadow-2xl group-hover:border-blue-200 transition-all duration-300 relative">
+                 <Image 
+                    src={img} 
+                    alt={title} 
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                    style={{ willChange: "transform" }}
+                 />
                  
                  {/* External Link Overlay */}
                  <a href={link} target="_blank" rel="noreferrer" className="absolute inset-0 z-20" />
@@ -39,8 +47,8 @@ const Projects = () => {
                     <h2 className="text-2xl font-bold text-black group-hover:text-blue-600 transition-colors">
                         {title}
                     </h2>
-                    <a href={link} target="_blank" rel="noreferrer" className="p-2 rounded-full border border-gray-200 hover:bg-black hover:text-white transition-all transform group-hover:rotate-45">
-                        <ArrowUpRight size={20} className="text-gray-500 group-hover:text-gray-100" />
+                    <a href={link} target="_blank" rel="noreferrer" className="p-2 rounded-full border border-gray-200 hover:bg-transparent hover:border-black transition-all transform group-hover:rotate-45">
+                        <ArrowUpRight size={20} className="text-gray-500 group-hover:text-black" />
                     </a>
                  </div>
                  

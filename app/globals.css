@@ -5,6 +5,25 @@
     --background: #ffffff;
     --foreground: #171717;
   }
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Reduce motion for users who prefer it */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+  * {
+    /* Optimize animations and transforms */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
   .dark {
     --background: #ffffff; /* Force light mode for now as per images */
     --foreground: #171717;
@@ -14,6 +33,32 @@
 @layer utilities {
   .font-signature {
     font-family: var(--font-arizonia), cursive !important;
+  }
+
+  /* Performance optimizations */
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .animate-bounce {
+    animation: bounce 2s ease-in-out infinite;
+    will-change: transform;
+  }
+  
+  /* Disable will-change after animation to free resources */
+  * {
+    will-change: auto;
+  }
+  
+  /* GPU acceleration only when needed */
+  .group:hover .group-hover\:scale-110 {
+    will-change: transform;
+    transform: translateZ(0);
   }
 
   /* Hide scrollbar for Marquee component */

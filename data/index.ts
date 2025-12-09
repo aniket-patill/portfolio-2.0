@@ -53,16 +53,16 @@ export const projects = [
     des: "Real-time collaborative code editor with live cursors and in-app communication.",
     img: "/coderev.png",
     iconLists: ["Next.js", "Tailwind", "TypeScript", "C"],
-    link: "https://code-rev-ai-online-code-ide.vercel.app",
+    link: "https://code-rev-ai-compiler.vercel.app",
   },
   {
-    id:3,
-    title:"SecurePass - A Encrypted Password Manager",
-    des:"A password manager that stores your passwords in an encrypted format using AES encryption.",
-    img:"/securepass.png",
-    iconLists:["Next.js","Tailwind","TypeScript","C"],
-    link:"https://securepass-zeta.vercel.app/login"
-  }
+    id: 3,
+    title: "SecurePass - A Encrypted Password Manager",
+    des: "A password manager that stores your passwords in an encrypted format using AES encryption.",
+    img: "/securepass.png",
+    iconLists: ["Next.js", "Tailwind", "TypeScript", "C"],
+    link: "https://securepass-zeta.vercel.app/login",
+  },
 ];
 
 export const workExperience = [

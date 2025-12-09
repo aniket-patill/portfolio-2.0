@@ -6,7 +6,7 @@ import { FaLocationArrow } from "react-icons/fa6";
 const Hero = () => {
   return (
     
-    <div className="relative w-full h-screen bg-gradient-to-br from-blue-400 via-blue-500 to-blue-700 flex flex-col items-center justify-center overflow-hidden"
+    <div className="relative w-full h-screen bg-linear-to-br from-blue-400 via-blue-500 to-blue-700 flex flex-col items-center justify-center overflow-hidden"
     >
 
       
@@ -16,8 +16,8 @@ const Hero = () => {
         </h1>
         
 
-        <div className="absolute bottom-20 flex flex-col items-center" style={{ animation: "bounce 2s ease-in-out infinite" }}>
-           <span className="text-white text-sm mb-2">Scroll Down</span>
+        <div className="absolute bottom-10 flex flex-col items-center" style={{ animation: "bounce 2s ease-in-out infinite" }}>
+           <span className="text-white text-sm mb-2 font-light">Scroll Down</span>
            <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center pt-2">
               <div className="w-1 h-2 bg-white rounded-full" />
            </div>

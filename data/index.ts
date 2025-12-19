@@ -16,7 +16,7 @@ export const socialMedia = [
   {
     id: 2,
     icon: "Linkedin",
-    link: "https://linkedin.com/in/aniket-patil-861244257",
+    link: "https://www.linkedin.com/in/aniket-patill",
   },
   {
     id: 3,
